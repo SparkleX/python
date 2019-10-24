@@ -1,0 +1,1 @@
+#https://www.simplifiedpython.net/speech-recognition-python/
