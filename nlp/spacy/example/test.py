@@ -1,3 +1,5 @@
+#python3 -m spacy download xx_ent_wiki_sm
+
 import spacy 
 from spacy import displacy	
 
@@ -10,11 +12,11 @@ def findTransaction(name):
 			return t
 
 def nlp(text):
-	nlp = spacy.load("en")
+	nlp = spacy.load("xx_ent_wiki_sm")
 	doc = nlp(text)
 	normalized = '';
 	for token in doc:	
-		#print(token.text, token.lemma_, token.pos_, token.is_stop)
+		print(token.text, token.lemma_, token.pos_, token.is_stop)
 		normalized = normalized + token.lemma_ + ' '
 	find = findTransaction(normalized)
 	if find is not None:
